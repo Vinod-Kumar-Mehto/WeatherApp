@@ -1,0 +1,157 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+    
+    .container{
+        width: 320px;
+        height: 400px;
+        background-image: linear-gradient(to bottom, rgb(83, 154, 201), rgb(182, 205, 216), rgb(129, 164, 209));
+        margin: 30px auto;
+        box-shadow: 1px 1px 10px gray;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+    .container input{
+      margin: 20px 80px;
+      width: 150px;
+      height: 50px;
+      border-radius: 50px;
+      outline: none;
+      font-size: 25px;
+      text-align: center;
+    }
+    .container .display{
+      margin: 90px 25px;
+      width: 280px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container .location{
+        margin: 10px auto;
+        font-size: 40px;
+        
+    }
+    .container .location p::first-letter{
+        text-transform: uppercase;
+        
+    }
+    .container .para{
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 100px 60px;
+    }
+    .container .location i, p{
+        display: inline-block;
+        
+    }
+
+    .container .location i{
+        color: white;
+        font-size: 60px;
+        animation: move 2000ms linear infinite;
+    }
+    @keyframes move{
+        0%{margin-left: 0px;}
+        25%{margin-left: 7px;}
+        50%{margin-left: 15px;}
+        75%{margin-left: 8px;}
+        100%{margin-left: 0px;}
+    }
+    .wave{
+        opacity: 0.3;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        background-color: white;
+        width: 30rem;
+        height: 30rem;
+        margin-left: -15rem;
+        margin-top: -16rem;
+        transform-origin: 50% 43%;
+        border-radius: 43%;
+        animation: drift 3000ms infinite linear;
+        z-index: 1;
+    }
+    .wave .-two{
+        animation: drift 7000ms infinite linear;
+        opacity: 0.1 !important;
+        z-index: 2 !important;
+        
+    }
+    .wave .-three{
+        animation: drift 5000ms infinite linear;
+        opacity: 0.2 !important;
+        z-index: 3 !important;
+    }
+
+    @keyframes drift {
+        from{
+            transform: rotate(0deg);
+        }
+        from{
+            transform: rotate(180deg);
+        }
+        from{
+            transform: rotate(360deg);
+        }
+        to{
+            transform: rotate(0deg);
+        }
+    }
+
+    .box{
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, rgb(128, 207, 118), rgb(196, 165, 80), rgb(143, 105, 165));
+    }
+
+    .box .head{
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(107, 113, 116);
+    }
+
+    @media screen and (max-width:400px){
+        .container{
+            width: 220px;
+            height: 330px;
+           
+        }
+
+        .box{
+            height: 640px;
+        }
+        .container input{
+          margin: 20px 45px;
+          width: 130px;
+          height: 40px;
+        
+        }
+        .container .display{
+          margin: 50px -30px;
+          width: 280px;
+          height: 180px;
+          
+        }
+        .container .location{
+            margin: 10px auto;
+            font-size: 20px;
+            
+        }
+
+        .wave{
+            margin-top: -15rem;
+            transform-origin: 50% 48%;
+        }
+
+
+    }
